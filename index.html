@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>PokeCatcher</title>
+<link rel="stylesheet" href="styles/style.css" />
+</head>
+
+<body>
+    <div id="loader" class="loader">
+        <div class="loader-content">
+        <img class="animatn-logo" src="images/logo.svg" width="80" height="80">
+        <span class="animatn-text">Defuse bomb is loading...</span>
+        </div>
+    </div>
+    <div >
+        <header>
+
+            <nav>
+                <div class="logo">
+                    <img src="images/logo.svg" width="80" height="80"><div>&nbsp;Poke'Catcher</div>
+                </div>
+                <div></div>
+                <div class="menubar">
+
+
+                    <div id="account-btn" class="menu-bttn"><img src="images/account.svg"><span></span></div>
+                    <div class="status">
+                        <div id="nrlevel" style="display: none;">0</div>
+                        <div class="status-btn xp"><img src="images/flame.svg"><div><span id="xp" class="nrxp">0</span></div></div>
+                        <div class="status-btn poke"><img src="images/pokeball.svg"><div><span  id = "nrpoke" class="nrpokemons">0</span> </div></div>
+                    </div>
+                </div>
+            </nav>
+            <div id="level-progress-indicator" class="level-progress-indicator">
+            </div>
+        </header>
+
+        <main class="main_style">
+        <!--style="background-image: url("../images/container-wallpaper.jpg");">-->
+            <div class="container" style="border-radius: 1rem;">
+        <div class="left-container" >
+
+            <div class="instructions">
+            <h2 align="center">Poke'Catcher</h2><br>
+            <p> Learn programming concepts as you catch the pokemons </p><br>
+            <p> First we will learn about variables and datatype</p>
+            <br><h4 align="center">Variables:</h4><br>
+            <p>A variable is like a container that hold information. Just like how different pokeballs store different pokemons.</p>
+            <br><p > <h4 align="center">Datatypes</h4><br></p>
+            <p>The kind of value that a variable can hold is also called a data type. Now, let us look at 3 different data types – Numbers, Strings, and Booleans.</p>
+                <br><div class="datatype"><br><p style="color: orange">Number</p> <br>Any numerical value is a number. In programming language there are of two types: integers and double</div>
+                <br><div class="datatype" ><br><p style="color: deepskyblue ">String</p> <br>Strings are variables used to represent text. Strings hold groups of characters, like a word or a phrase.</div>
+                <br><div class="datatype" ><br><p style="color: violet">Boolean</p> <br> Booleans are truth values–they’re a data type that can represent one of two outcomes: true or false.</div>
+            <br><br><p>Now that you know what variable and datatypes are lets fill out your basic information by guessing the right datatype</p>
+
+            </div>
+        </div>
+
+        <div class="middle-container"></div>
+
+        <div class="right-container" >
+            <h3 align="center">Personal Information</h3><br>
+
+            <form id="form">
+                <div>
+                    <label ><font size="-1">What would be the datatype of your name:</font></label><br><br>
+                    <div id="btnContainer1"><br>
+                        <button class="stringname actionbtn hover" id="stringname" type="button" onclick="checknameAnswer()"><span>String</span></button>
+                        <button class="booleanname actionbtn hover" id="booleanname" type="button"  onclick="checknamewrong()"><span>Boolean</span></button>
+                        <button class="numbername actionbtn hover" id="numbername" type="button" onclick="checknamewrong()"><span>Number</span></button>
+                    </div>
+                    <p hidden id="wrong" style="color: red" align="center"><font size="-1">Name contains alphabets so it is a ??</font><br></p>
+                    <br> <input type="text" id="name" style="width: 300px"   required placeholder="Enter your name" disabled>
+                </div>
+
+                <div>
+                    <label for="age"><font size="-1">What would be the datatype of your age:</font></label><br> <br>
+                    <div id="btnContainer2" align="center"><br>
+                        <button class="stringage actionbtn hover" id="stringage"  type="button" onclick="checkagewrong()"><span>String</span></button>
+                        <button class="booleanage actionbtn hover" id="booleanage" type="button"  onclick="checkagewrong()" ><span>Boolean</span></button>
+                        <button class="numberage actionbtn hover" id="numberage" type="button" onclick="checkageans()"><span>Number</span></button>
+                    </div>
+                    <p hidden id="wrongage" style="color: red" align="center"><font size="-1">Age contains numbers so it is a ??</font><br></p>
+
+                    <br><input type="text" id="age"  style="width: 300px" required placeholder="Enter your age" disabled>
+                </div>
+                    <div>
+                        <label ><font size="-1">Which datatype would best describe the answer for the statement</font> <br><br><h4 align="center"><font size="-1">"SKY IS BLUE"</font></h4></label><br>
+                        <p hidden id="wrongbool" style="color: red" align="center"><font size="-1">It is either true or false so it is a ??</font><br></p>
+
+                        <div id="btnContainer3" align="center"><br>
+                            <button class="stringbool actionbtn hover" id="stringbool" type="button" onclick="checkboolwrong()"><span>String</span></button>
+                            <button class="booleanbool actionbtn hover" id="booleanbool" type="button" onclick="checkboolans()" ><span>Boolean</span></button>
+                            <button class="numberbool actionbtn hover" id="numberbool" type="button" onclick="checkboolwrong()"><span>Number</span></button>
+
+                        </div>
+
+                    </div>
+
+            </form>
+            <br><div align="center">
+                <button class="letstart actionbtn hover" id="lets-start" type="submit" onclick="storeName()"><span>Let's Start</span></button> <!--onclick="window.location.href = 'game.html';"-->
+            </div>
+        </div>
+            </div>
+        </main>
+    </div>
+    <script type="module" src="scripts/main.js"></script>
+    <script src="scripts/utilities.js"></script>
+</body>
+
+</html>
